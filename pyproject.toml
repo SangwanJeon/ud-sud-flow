@@ -1,0 +1,48 @@
+# ==========================================
+# UD-SUD-Flow — Python package configuration
+# ==========================================
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "udsudflow"
+version = "0.1.0"
+description = "A modular toolkit for UD/SUD dependency annotation, corpus conversion, and ArboratorGrew integration."
+readme = "README.md"
+requires-python = ">=3.10"
+
+authors = [
+    {name = "Sangwan Jeon"}
+]
+
+keywords = [
+    "corpus linguistics",
+    "dependency parsing",
+    "Universal Dependencies",
+    "Surface-Syntactic Universal Dependencies",
+    "CoNLL-U",
+    "ArboratorGrew",
+    "ELAN",
+    "linguistic annotation"
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Text Processing :: Linguistic"
+]
+
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
